@@ -7,6 +7,12 @@
     z-index: 100000;
 }
 
+.navbar-logo img {
+    max-height: 15%;
+    max-width: 15%;
+    object-fit: contain;
+  }
+
 .navbar:before {
     content: "";
     position: absolute;
