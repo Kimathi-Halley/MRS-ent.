@@ -11,7 +11,7 @@
     }
 
     .hero {
-        padding: 150px 0 25px 0;
+        padding: 25px 0 25px 0;
     }
 
     .hero-header, .hero-copy {
@@ -19,8 +19,25 @@
     }
 
     .hero-img {
-        margin: 25px 0;
+      margin: 10px -20px;
+      width: 100vw; /* Full viewport width */
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
     }
+
+    
+    
+    .hero-img-wrapper img {
+      width: 100%;
+      height: auto;
+      max-height: 70vh; /* Limit height to maintain layout */
+      object-fit: cover; /* Maintain aspect ratio */
+    }
+
+
 
     .logo {
         min-width: calc((100% - 20px) / 2); 

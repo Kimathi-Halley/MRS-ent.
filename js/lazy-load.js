@@ -4,28 +4,63 @@ document.addEventListener('DOMContentLoaded', function() {
     function createPlaceholder(img) {
         const placeholder = document.createElement('div');
         placeholder.className = 'image-placeholder';
+        
+        // Get dimensions from the image or its container
+        const container = img.closest('.blog-img') || img.parentElement;
+        const containerRect = container.getBoundingClientRect();
+        
+        // Use container dimensions or fallback to reasonable defaults
+        const width = containerRect.width || '100%';
+        const height = img.height || containerRect.height || 300;
+        
         placeholder.style.cssText = `
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-            background-size: 200% 100%;
-            animation: loading 1.5s infinite;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 14px;
+            width: ${typeof width === 'number' ? width + 'px' : width};
+            height: ${typeof height === 'number' ? height + 'px' : height};
+            background: #f5f5f5;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
         `;
-        placeholder.textContent = 'Loading...';
+        
+        // Create shimmer effect
+        const shimmer = document.createElement('div');
+        shimmer.style.cssText = `
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.4) 50%, 
+                transparent 100%
+            );
+            transform: translateX(-100%);
+            animation: shimmer 1.5s infinite;
+        `;
+        
+        // Create icon
+        const icon = document.createElement('div');
+        icon.innerHTML = '<i class="ph ph-pipe-wrench" style="font-size: 48px; color: #ddd;"></i>';
+        icon.style.cssText = `
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        `;
+        
+        placeholder.appendChild(icon);
+        placeholder.appendChild(shimmer);
         
         // Add CSS animation if not already added
         if (!document.querySelector('#loading-animation')) {
             const style = document.createElement('style');
             style.id = 'loading-animation';
             style.textContent = `
-                @keyframes loading {
-                    0% { background-position: 200% 0; }
-                    100% { background-position: -200% 0; }
+                @keyframes shimmer {
+                    0% { transform: translateX(-100%); }
+                    100% { transform: translateX(100%); }
                 }
                 .image-loaded {
                     opacity: 0;
@@ -33,6 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 .image-loaded.fade-in {
                     opacity: 1;
+                }
+                .image-placeholder {
+                    display: block;
+                    min-height: 200px;
                 }
             `;
             document.head.appendChild(style);
@@ -76,9 +115,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     };
                     
                     tempImg.onerror = function() {
-                        placeholder.textContent = 'Failed to load';
+                        // Update placeholder for error state
                         placeholder.style.background = '#ffebee';
-                        placeholder.style.color = '#c62828';
+                        const icon = placeholder.querySelector('i');
+                        if (icon) {
+                            icon.className = 'ph ph-x-circle';
+                            icon.style.color = '#c62828';
+                        }
+                        const shimmer = placeholder.querySelector('div:last-child');
+                        if (shimmer) {
+                            shimmer.style.display = 'none';
+                        }
                     };
                     
                     tempImg.src = img.dataset.src || img.src;
