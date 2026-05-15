@@ -11,7 +11,18 @@
     }
 
     .hero {
-        padding: 25px 0 25px 0;
+        height: 100vh;
+        min-height: 560px;
+        padding: calc(60px + clamp(12px, 1.5vh, 20px)) 0 clamp(12px, 1.5vh, 20px) 0;
+    }
+
+    .hero > .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    section.ellipse {
+        margin-top: -160px;
     }
 
     .hero-header, .hero-copy {
@@ -19,22 +30,30 @@
     }
 
     .hero-img {
-      margin: 10px -20px;
-      width: 100vw; /* Full viewport width */
+      margin: 0 0 clamp(18px, 2.5vh, 28px) 0;
+      width: 100%;
+      left: auto;
+      right: auto;
       position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    
-    
+    .hero-img-wrapper {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 18px;
+    }
+
     .hero-img-wrapper img {
       width: 100%;
-      height: auto;
-      max-height: 70vh; /* Limit height to maintain layout */
-      object-fit: cover; /* Maintain aspect ratio */
+      height: 100%;
+      max-width: none;
+      max-height: none;
+      object-fit: cover;
+      object-position: 65% 58%;
+      border-radius: 18px;
+      border: none;
     }
 
 

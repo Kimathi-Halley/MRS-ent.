@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Codegrid" />
     <title>About Us | MRS |</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16.png">
+    <link rel="icon" href="./assets/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/company.css" />
     <link rel="stylesheet" href="/css/blog.css" />
@@ -18,22 +22,34 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar-logo">
-          <a href="index.html"> <img src="./assets/M.R.S Logo.png" alt="logo"> </a>
+          <a href="index.html" aria-label="M.R.S Enterprise home">
+            <img src="./assets/M.R.S Mark White.webp" alt="">
+            <span class="navbar-wordmark">M.R.S Enterprise</span>
+          </a>
         </div>
         <div class="navbar-items">
           <input type="checkbox" id="hamburger-toggle" />
-          <label for="hamburger-toggle" class="hamburger-icon">
-            <i class="ph-light ph-list"></i>
+          <label for="hamburger-toggle" class="hamburger-icon" aria-label="Toggle menu">
+            <i class="ph-light ph-list icon-open"></i>
+            <i class="ph-light ph-x icon-close"></i>
           </label>
           <ul class="navbar-links">
             <li class="navbar-item"><a href="./index.html">Home</a></li>
             <li class="navbar-item"><a href="./projects.html">Projects</a></li>
-            <li class="navbar-item"><a href="./company.html">Company</a></li>
+            <li class="navbar-item"><a href="./company.html" aria-current="page">Company</a></li>
             <li class="navbar-item"><a href="./contact.html">Contact</a></li>
             <li>
               <div class="btn">
                 <a href="https://www.instagram.com/m.r.s.enterpri?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Follow Us!</a>
               </div>
+            </li>
+            <li class="mobile-only mobile-extras" aria-hidden="true">
+              <div class="mobile-socials">
+                <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
+                <a href="https://www.instagram.com/m.r.s.enterpri" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+              </div>
+              <p class="mobile-tag">Antigua &middot; Since 2018</p>
             </li>
           </ul>
         </div>
@@ -42,9 +58,6 @@
 
     <div class="wrapper">
       <div class="radial-gradient"></div>
-      <div class="bg">
-        <img src="./assets/about-bg.png" alt="" />
-      </div>
 
       <div class="page-content company-page">
         <section class="about">
@@ -64,34 +77,39 @@
                   </p>
                 </div>
                 <div class="about-image">
-                  <img src="assets/hero.jpg" alt="M.R.S. Enterprise Team at Work">
+                  <img src="./assets/hero.webp" alt="M.R.S. Enterprise Team at Work" loading="lazy" decoding="async">
                 </div>
               </div>
               
-              <h2>Our Services</h2>
+              <h2 id="services">Our Services</h2>
               <div class="services-list">
                 <div class="service-item">
-                  <h3><i class="ph ph-wind"></i> Air Conditioning</h3>
+                  <div class="service-icon"><i class="ph-fill ph-wind"></i></div>
+                  <h3>Air Conditioning</h3>
                   <p>Installation, maintenance, and repair of cooling systems for homes and businesses.</p>
                 </div>
-                
+
                 <div class="service-item">
-                  <h3><i class="ph ph-snowflake"></i> Refrigeration</h3>
+                  <div class="service-icon"><i class="ph-fill ph-snowflake"></i></div>
+                  <h3>Refrigeration</h3>
                   <p>Expert services for all types of refrigeration systems and cooling equipment.</p>
                 </div>
-                
+
                 <div class="service-item">
-                  <h3><i class="ph ph-lightning"></i> Electrical</h3>
+                  <div class="service-icon"><i class="ph-fill ph-lightning"></i></div>
+                  <h3>Electrical</h3>
                   <p>Safe and reliable electrical installations, repairs, and maintenance services.</p>
                 </div>
-                
+
                 <div class="service-item">
-                  <h3><i class="ph ph-drop"></i> Plumbing</h3>
+                  <div class="service-icon"><i class="ph-fill ph-drop"></i></div>
+                  <h3>Plumbing</h3>
                   <p>Complete plumbing solutions for residential and commercial properties.</p>
                 </div>
-                
+
                 <div class="service-item">
-                  <h3><i class="ph ph-fire"></i> Welding</h3>
+                  <div class="service-icon"><i class="ph-fill ph-fire"></i></div>
+                  <h3>Welding</h3>
                   <p>Professional welding services with precision and quality craftsmanship.</p>
                 </div>
               </div>
@@ -109,32 +127,37 @@
             <div class="team-content">
               <div class="team-copy">
                 <h1>Jerome</h1>
-                <p>
-                 filler paragraph
-                </p>
+                <ul class="team-creds">
+                  <li><i class="ph ph-certificate"></i> Certified Level 3 Diploma in Electrical</li>
+                  <li><i class="ph ph-certificate"></i> Certified MEP Engineer</li>
+                </ul>
+                <p class="team-bio">Founding partner. Leads project scoping, electrical design, and on&#8209;site supervision.</p>
                 <div class="hero-callout">
-                  <a href="#">contact us</a>
+                  <a href="./contact.html">Contact us</a>
                   <i class="ph ph-caret-right"></i>
                 </div>
               </div>
               <div class="team-img">
-                <img src="./assets/team.png" alt="pic of jerome" />
+                <img src="./assets/jumbybayelectrical/jumby_5.webp" alt="Jerome, founding partner of M.R.S Enterprise" loading="lazy" decoding="async" tabindex="0">
               </div>
             </div>
 
             <div class="team-content">
               <div class="team-copy">
                 <h1>Leon</h1>
-                <p>
-                 random filler paragraph
-                </p>
+                <ul class="team-creds">
+                  <li><i class="ph ph-certificate"></i> Certified Level 3 Diploma in Electrical</li>
+                  <li><i class="ph ph-certificate"></i> Certified MEP Engineer</li>
+                  <li><i class="ph ph-certificate"></i> Certified Welder (CW)</li>
+                </ul>
+                <p class="team-bio">Founding partner. Heads up mechanical installation, refrigeration, and welded&#8209;steel work.</p>
                 <div class="hero-callout">
-                  <a href="#">contact us</a>
+                  <a href="./contact.html">Contact us</a>
                   <i class="ph ph-caret-right"></i>
                 </div>
               </div>
               <div class="team-img">
-                <img src="./assets/team.png" alt="pic of leon" />
+                <img src="./assets/jumbybayelectrical/jumby_6.webp" alt="Leon, founding partner of M.R.S Enterprise" loading="lazy" decoding="async" tabindex="0">
               </div>
             </div>
 
@@ -144,36 +167,76 @@
         
         <div class="divider"></div>
 
-        <footer>
+        <footer class="site-footer">
           <div class="container">
-            <div class="footer-brand">
-              <p>
-               <a href="#">M.R.S</a> 
-              </p>
-              <div class="socials">
-                <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
-                <a href="#"><i class="ph-fill ph-whatsapp-logo"></i></a>
-                <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+            <div class="footer-top">
+              <div class="footer-brand">
+                <a href="./index.html" class="footer-logo" aria-label="M.R.S Enterprise home">
+                  <img src="./assets/M.R.S Mark White.webp" alt="">
+                  <span class="footer-wordmark">M.R.S Enterprise</span>
+                </a>
+                <p class="footer-tag">HVAC&#8209;R, plumbing &amp; electrical specialists serving Antigua since 2018.</p>
+              </div>
+
+              <div class="footer-links">
+                <div class="footer-col">
+                  <h4>Explore</h4>
+                  <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./company.html">Company</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Services</h4>
+                  <ul>
+                    <li><a href="./company.html#services">Air Conditioning</a></li>
+                    <li><a href="./company.html#services">Refrigeration</a></li>
+                    <li><a href="./company.html#services">Electrical</a></li>
+                    <li><a href="./company.html#services">Plumbing</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Contact</h4>
+                  <ul>
+                    <li><a href="https://www.instagram.com/m.r.s.enterpri/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://wa.me/12687780607" target="_blank" rel="noopener">+1 (268) 778-0607</a></li>
+                    <li><a href="mailto:m.r.s.enterprise268@gmail.com">m.r.s.enterprise268@gmail.com</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="footer-links">
-              <div class="footer-col">
-                <p><a href="#">Product</a></p>
-                
+
+            <div class="footer-bottom">
+              <p class="footer-copy">&copy; <span id="footer-year">2026</span> M.R.S Enterprise. All rights reserved.</p>
+              <div class="socials" aria-label="Social links">
+                <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
+                <a href="https://www.instagram.com/m.r.s.enterpri" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
               </div>
-              <div class="footer-col">
-                <p><a href="#">Company</a></p>
-                
-              </div>
-              <div class="footer-col">
-                <p><a href="#">Contact</a></p>
-                
-              </div>
-              
             </div>
           </div>
         </footer>
       </div>
     </div>
+    <script src="./js/card-spotlight.js"></script>
+    <script>
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+      // Tap-to-toggle team photos: reveals on tap/click, resets on outside click
+      (() => {
+        const photos = document.querySelectorAll('.team-img img');
+        photos.forEach(img => {
+          img.addEventListener('click', function (e) {
+            e.stopPropagation();
+            photos.forEach(p => { if (p !== this) p.classList.remove('revealed'); });
+            this.classList.toggle('revealed');
+          });
+        });
+        document.addEventListener('click', () => {
+          photos.forEach(p => p.classList.remove('revealed'));
+        });
+      })();
+    </script>
   </body>
 </html>

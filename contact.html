@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Codegrid" />
     <title>Contact | MRS</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16.png">
+    <link rel="icon" href="./assets/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
@@ -17,22 +21,34 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar-logo">
-          <a href="index.html"> <img src="./assets/M.R.S Logo.png" alt="logo"> </a>
+          <a href="index.html" aria-label="M.R.S Enterprise home">
+            <img src="./assets/M.R.S Mark White.webp" alt="">
+            <span class="navbar-wordmark">M.R.S Enterprise</span>
+          </a>
         </div>
         <div class="navbar-items">
           <input type="checkbox" id="hamburger-toggle" />
-          <label for="hamburger-toggle" class="hamburger-icon">
-            <i class="ph-light ph-list"></i>
+          <label for="hamburger-toggle" class="hamburger-icon" aria-label="Toggle menu">
+            <i class="ph-light ph-list icon-open"></i>
+            <i class="ph-light ph-x icon-close"></i>
           </label>
           <ul class="navbar-links">
             <li class="navbar-item"><a href="./index.html">Home</a></li>
             <li class="navbar-item"><a href="./projects.html">Projects</a></li>
             <li class="navbar-item"><a href="./company.html">Company</a></li>
-            <li class="navbar-item"><a href="./contact.html">Contact</a></li>
+            <li class="navbar-item"><a href="./contact.html" aria-current="page">Contact</a></li>
             <li>
               <div class="btn">
                 <a href="https://www.instagram.com/m.r.s.enterpri?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Follow Us!</a>
               </div>
+            </li>
+            <li class="mobile-only mobile-extras" aria-hidden="true">
+              <div class="mobile-socials">
+                <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
+                <a href="https://www.instagram.com/m.r.s.enterpri" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+              </div>
+              <p class="mobile-tag">Antigua &middot; Since 2018</p>
             </li>
           </ul>
         </div>
@@ -51,7 +67,7 @@
             </div>
             <div class="hero-copy">
               <p>
-                Get in touch with us for a free consultation.
+                Get in touch for a free consultation, we'll get back to you the same day.
               </p>
             </div>
           </div>
@@ -59,106 +75,115 @@
 
         <section class="contact-cards">
           <div class="container">
-            <div class="contact-card">
-              <p><i class="ph ph-envelope-simple"></i> Sales</p>
-              <span>
-                
-              </span>
-
+            <a class="contact-card" href="https://wa.me/12687780607" target="_blank" rel="noopener">
+              <div class="contact-icon"><i class="ph-fill ph-whatsapp-logo"></i></div>
+              <p>WhatsApp</p>
+              <span>Fastest way to reach us.</span>
+              <div class="contact-value">+1 (268) 778-0607</div>
               <div class="hero-callout">
-                <a href="#"></a>
+                <span>Message us</span>
                 <i class="ph ph-caret-right"></i>
               </div>
-            </div>
+            </a>
 
-            <div class="contact-card">
-              <p>
-                <i class="ph-fill ph-chat-teardrop-dots"></i> may move this
-              </p>
-              <span>
-               span
-              </span>
-
+            <a class="contact-card" href="mailto:m.r.s.enterprise268@gmail.com">
+              <div class="contact-icon"><i class="ph-fill ph-envelope-simple"></i></div>
+              <p>Email</p>
+              <span>For quotes, and longer enquiries.</span>
+              <div class="contact-value">m.r.s.enterprise268@gmail.com</div>
               <div class="hero-callout">
-                <a href="#"></a>
+                <span>Send email</span>
                 <i class="ph ph-caret-right"></i>
+              </div>
+            </a>
+
+            <a class="contact-card" href="https://www.instagram.com/m.r.s.enterpri/" target="_blank" rel="noopener">
+              <div class="contact-icon"><i class="ph-fill ph-instagram-logo"></i></div>
+              <p>Instagram</p>
+              <span>Project photos, build progress, behind&#8209;the&#8209;scenes.</span>
+              <div class="contact-value">@m.r.s.enterpri</div>
+              <div class="hero-callout">
+                <span>Follow</span>
+                <i class="ph ph-caret-right"></i>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="contact-info">
+          <div class="container">
+            <div class="info-grid">
+              <div class="info-item">
+                <h3><i class="ph ph-map-pin"></i> Service area</h3>
+                <p>Antigua &amp; Barbuda &mdash; residential, commercial, and resort projects island&#8209;wide.</p>
+              </div>
+              <div class="info-item">
+                <h3><i class="ph ph-clock"></i> Hours</h3>
+                <p>Monday &ndash; Saturday, 8:00 AM &ndash; 5:00 PM. Emergency call&#8209;outs available 24/7.</p>
+              </div>
+              <div class="info-item">
+                <h3><i class="ph ph-wrench"></i> Services</h3>
+                <p>HVAC&#8209;R, plumbing, electrical, refrigeration, and welding for any scale of project.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <div class="container">
-          <div class="contact-items">
-            <div class="c-item">
-              <p></p>
-              <span>
-                
-              </span>
-              <br /><br />
-              
-            </div>
-            <div class="c-item">
-              <p></p>
-              <span>
-               <br>
-              </span>
-              <br /><br />
-              
-            </div>
-          </div>
-
-          <div class="contact-items">
-            <div class="c-item">
-              <p></p>
-              <span>
-               
-              </span>
-              <br /><br />
-              
-            </div>
-            <div class="c-item">
-              <p></p>
-              <span>
-              
-              </span>
-              <br /><br />
-              <br><br>
-            </div>
-          </div>
-        </div>
-
         <div class="divider"></div>
 
-        <footer>
+        <footer class="site-footer">
           <div class="container">
-            <div class="footer-brand">
-              <p>
-               <a href="#">M.R.S</a> 
-              </p>
-              <div class="socials">
-                <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
-                <a href="#"><i class="ph-fill ph-whatsapp-logo"></i></a>
-                <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+            <div class="footer-top">
+              <div class="footer-brand">
+                <a href="./index.html" class="footer-logo" aria-label="M.R.S Enterprise home">
+                  <img src="./assets/M.R.S Mark White.webp" alt="">
+                  <span class="footer-wordmark">M.R.S Enterprise</span>
+                </a>
+                <p class="footer-tag">HVAC&#8209;R, plumbing &amp; electrical specialists serving Antigua since 2018.</p>
+              </div>
+
+              <div class="footer-links">
+                <div class="footer-col">
+                  <h4>Explore</h4>
+                  <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./company.html">Company</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Services</h4>
+                  <ul>
+                    <li><a href="./company.html#services">Air Conditioning</a></li>
+                    <li><a href="./company.html#services">Refrigeration</a></li>
+                    <li><a href="./company.html#services">Electrical</a></li>
+                    <li><a href="./company.html#services">Plumbing</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Contact</h4>
+                  <ul>
+                    <li><a href="https://www.instagram.com/m.r.s.enterpri/" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://wa.me/12687780607" target="_blank" rel="noopener">+1 (268) 778-0607</a></li>
+                    <li><a href="mailto:m.r.s.enterprise268@gmail.com">m.r.s.enterprise268@gmail.com</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="footer-links">
-              <div class="footer-col">
-                <p><a href="#">Product</a></p>
-                
+
+            <div class="footer-bottom">
+              <p class="footer-copy">&copy; <span id="footer-year">2026</span> M.R.S Enterprise. All rights reserved.</p>
+              <div class="socials" aria-label="Social links">
+                <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
+                <a href="https://www.instagram.com/m.r.s.enterpri" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
               </div>
-              <div class="footer-col">
-                <p><a href="#">Company</a></p>
-                
-              </div>
-              <div class="footer-col">
-                <p><a href="#">Contact</a></p>
-                
-              </div>
-              
             </div>
           </div>
         </footer>
       </div>
     </div>
+    <script src="./js/card-spotlight.js"></script>
+    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
   </body>
 </html>
